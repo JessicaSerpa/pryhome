@@ -35,7 +35,7 @@
             <div class="account-cart">
                 <a href="login.jsp" class="account-link">
                     <i class="fas fa-user"></i>
-                    <span>Mi Cuenta</span>
+                    <span>Mi Cuenta I love <3 jasb very muchito</span>
                 </a>
                 <a href="#" class="cart-link">
                     <i class="fas fa-shopping-cart"></i>
