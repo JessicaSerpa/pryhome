@@ -17,7 +17,7 @@
               <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
           <link href="CSS/StyleHome.css" rel="stylesheet" type="text/css"/>
           
-        <title>Home Jasb me quiere, pero menos q yo a ella</title>
+        <title>Home</title>
 
     </head>
  <body>
@@ -37,7 +37,7 @@
             <div class="account-cart">
                 <a href="login.jsp" class="account-link">
                     <i class="fas fa-user"></i>
-                    <span>Mi negro</span>
+                    <span>Mi cuenta</span>
                 </a>
                 <a href="#" class="cart-link">
                     <i class="fas fa-shopping-cart"></i>
