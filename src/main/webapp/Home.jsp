@@ -35,7 +35,7 @@
             <div class="account-cart">
                 <a href="login.jsp" class="account-link">
                     <i class="fas fa-user"></i>
-                    <span>Mi Cuenta I love <3 jasb very muchito</span>
+                    <span>Mi Cuenta</span>
                 </a>
                 <a href="#" class="cart-link">
                     <i class="fas fa-shopping-cart"></i>
@@ -203,7 +203,7 @@ intervalId = setInterval(function(){
            
          <!-- aca acaba el slider -->
           <section class="content about">
-         <h2 class="title">Nosotros: Jasb y yo <3</h2>
+         <h2 class="title">Nosotros</h2>
          <p>
              Lorem aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -315,9 +315,8 @@ intervalId = setInterval(function(){
         </div>
     </div>
 </section>
-         
-
-    <footer class="footer-distributed">
+    
+    <section class="footer-distributed">
 
         <div class="footer-left">
             <h3>Sagar<span>Developer</span></h3>
@@ -367,7 +366,7 @@ intervalId = setInterval(function(){
                 <a href="#"><i class="fa fa-youtube"></i></a>
             </div>
         </div>
-    </footer>
+    </section>
          
             </div>
     </body>

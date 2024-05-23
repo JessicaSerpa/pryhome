@@ -348,17 +348,7 @@ p{
     color: #fff; 
  
 }
-.pie{
-    padding: 50px 0;
-    background: pink;
-      text-align: center; /* Center text within the section */
-}
-.footer{
-    display: flex;
-        justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    flex-direction: column; /* Stack elements vertically */
-}
+
 @media (max-width: 768px){
     p{
         padding: 0  50px;
@@ -376,30 +366,20 @@ p{
         height:100vh;
         padding: 50px 0;
     }
-    .footer-section{
-        display: flex;
-        flex-direction:column;
-    }
 }
 
 /* ============= footer =============*/
-
-
-
-
-/* The footer is fixed to the bottom of the page */
-
-cuerpo footer {
+cuerpo footer-distributed {
     position: fixed;
     bottom: 0;
 }
 
 @media (max-height:800px) {
-    footer {
+    .cuerpo footer distributed {
         position: static;
     }
     header {
-        padding-top: 40px;
+        padding-top: 0px;
     }
 }
 
@@ -410,6 +390,7 @@ cuerpo footer {
     text-align: left;
     font: bold 16px sans-serif;
     padding: 50px 50px 60px 50px;
+    margin-top: 0px;
 }
 
 .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
@@ -558,5 +539,4 @@ cuerpo footer {
     .footer-distributed .footer-center i {
         margin-left: 0;
     }
-}       
-        
+}    
