@@ -6,8 +6,8 @@
 }
 
 .LOGIN{
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-color: #000001;
+    background: linear-gradient(to right, #2b2b2b, #000001);
     display: flex;
     align-items: center;
     justify-content: center;
