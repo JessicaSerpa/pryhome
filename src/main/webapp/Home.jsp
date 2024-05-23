@@ -215,7 +215,7 @@ intervalId = setInterval(function(){
          <div class="box-container2">
              <div class="box">
                  <img src="img/pic1.jpg" alt=""/>
-                 <h3>Lorem</h3>
+                 <h3>Lorem ehm</h3> eeeeeeeeehm
                  <p>aaaaaaaaaaaaaaaaaaaaaaa</p>
                  <div class="stars">
                      <i class="fas fa-star"></i>
