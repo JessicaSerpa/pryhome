@@ -3,93 +3,25 @@
     Created on : 16 may 2024, 10:43:44 p.m.
     Author     : Giovanni
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
            <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <link href="CSS/StyleMenu.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+             <meta http-equiv="X-UA-Compatible" content="IE=edge">
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
               <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+                  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+                  
           <link href="CSS/StyleHome.css" rel="stylesheet" type="text/css"/>
+                   <link href="CSS/StyleMenu.css" rel="stylesheet"/>
           
         <title>Home</title>
 
     </head>
  <body>
-    <div class="cabeza">
-        <header>
-            <div class="logo">
-                <a href="#"><img src="Imagenes/TechStore.png" alt="Logo"/> </a> 
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="menu-toggle"><i class="fas fa-bars"></i> Menú</a></li>
-                </ul>
-            </nav>
-            <div class="search-container">
-                <input type="text" placeholder="¿Qué estás buscando?" class="search-input">
-            </div>
-            <div class="account-cart">
-                <a href="login.jsp" class="account-link">
-                    <i class="fas fa-user"></i>
-                    <span>Mi cuenta</span>
-                </a>
-                <a href="#" class="cart-link">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span>Carrito</span>
-                </a>
-            </div>
-        </header>
-
-        <!-- Menú lateral -->
-        <div class="sidebar" id="sidebar">
-            <div class="sidebar-header">
-                <h2>¡Hola!</h2>
-                <a href="#" class="close-btn" id="close-btn"><i class="fas fa-times"></i></a>
-            </div>
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-house"></i> Incio</a></li>
-                <li><a href="#"><i class="fa-solid fa-tag"></i> Ofertas</a></li>
-                <li><a href="#"><i class="fa-solid fa-desktop"></i> Computadoras</a></li>
-                <li><a href="#"><i class="fa-solid fa-laptop"></i>Laptops</a></li>
-                <li><a href="#"><i class="fa-solid fa-microchip"></i>Componentes </a></li>
-                <li><a href="#"><i class="fa-solid fa-keyboard"></i>Perifericos</a></li>
-                <li><a href="#"><i class="fa-solid fa-question"></i></i>Quienes Somos</a></li>
-            </ul>
-        </div>
-
-        <!-- Overlay -->
-        <div class="overlay" id="overlay"></div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const menuToggle = document.querySelector('.menu-toggle');
-                const sidebar = document.getElementById('sidebar');
-                const closeBtn = document.getElementById('close-btn');
-                const overlay = document.getElementById('overlay');
-
-                menuToggle.addEventListener('click', function() {
-                    sidebar.classList.add('sidebar-visible');
-                    overlay.classList.add('overlay-visible');
-                });
-
-                closeBtn.addEventListener('click', function() {
-                    sidebar.classList.remove('sidebar-visible');
-                    overlay.classList.remove('overlay-visible');
-                });
-
-                overlay.addEventListener('click', function () {
-                    sidebar.classList.remove('sidebar-visible');
-                    overlay.classList.remove('overlay-visible');
-                });
-            });
-        </script>
-    </div>
+    <%@include file="Menu.jsp"%>
      <div class ="cuerpo">
           <!-- 
            <div class="inicio">
@@ -205,7 +137,7 @@ intervalId = setInterval(function(){
            
          <!-- aca acaba el slider -->
           <section class="content about">
-         <h2 class="title">Noseeee</h2> eee
+         <h2 class="title">Noseeee</h2> 
          <p>
              Lorem aeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
                 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -215,7 +147,7 @@ intervalId = setInterval(function(){
          <div class="box-container2">
              <div class="box">
                  <img src="img/pic1.jpg" alt=""/>
-                 <h3>Lorem a ver</h3> a verrr
+                 <h3>Lorem a ver</h3> 
                  <p>aaaaaaaaaaaaaaaaaaaaaaa</p>
                  <div class="stars">
                      <i class="fas fa-star"></i>
@@ -259,7 +191,7 @@ intervalId = setInterval(function(){
   <section class="content price">
       <div class="mission-vision">
         <article class="cortain">          
-            <h2 class="title">Misión a</h2> adasdasd a
+            <h2 class="title">Misión a</h2> 
             <p>Nuestra misión es proporcionar productos de alta calidad que mejoren la vida de nuestros clientes.</p>
                     <a href="#" class="btn">Saber precio</a>
         </article>
@@ -317,59 +249,9 @@ intervalId = setInterval(function(){
         </div>
     </div>
 </section>
-    
-    <section class="footer-distributed">
-
-        <div class="footer-left">
-            <h3>Sagar<span>Developer</span></h3>
-
-            <p class="footer-links">
-                <a href="#">Home</a>
-                |
-                <a href="#">About</a>
-                |
-                <a href="#">Contact</a>
-                |
-                <a href="#">Blog</a>
-            </p>
-
-            <p class="footer-company-name">Copyright © 2021 <strong>SagarDeveloper</strong> All rights reserved</p>
-        </div>
-
-        <div class="footer-center">
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p><span>Ghaziabad</span>
-                    Delhi</p>
-            </div>
-
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>+91 74**9**258</p>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>About the company</span>
-                <strong>Sagar Developer</strong> is a Youtube channel where you can find more creative CSS Animations
-                and
-                Effects along with
-                HTML, JavaScript and Projects using C/C++.
-            </p>
-            <div class="footer-icons">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-youtube"></i></a>
-            </div>
-        </div>
-    </section>
+  
          
             </div>
+     <%@include file="Footer.jsp"%>
     </body>
 </html>

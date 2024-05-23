@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="Menu.jsp"%>
+
+    <%@include file="Menu.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,14 +8,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <link href="CSS/style.css" rel="stylesheet" type="text/css"/>
     <title>login y registro</title>
 
 </head>  <!-- JEJEJEJEJEJEEEEEEEEEEEE  OJOJOJOJO-->
 
 <body>
+
     <div class="LOGIN">
         <div class="container" id="container">
             <div class="form-container sign-up">
@@ -104,6 +106,7 @@
         });
     <% } %>
 </script>
-
+<%@include file="Footer.jsp"%>
 </body>
+</html>
 
