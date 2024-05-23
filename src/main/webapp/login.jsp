@@ -106,7 +106,8 @@
         });
     <% } %>
 </script>
-<%@include file="Footer.jsp"%>
+
 </body>
+<%@include file="Footer.jsp"%>
 </html>
 
