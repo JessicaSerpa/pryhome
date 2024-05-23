@@ -205,7 +205,7 @@ intervalId = setInterval(function(){
            
          <!-- aca acaba el slider -->
           <section class="content about">
-         <h2 class="title">Nosotros aa</h2> aaa aaaa
+         <h2 class="title">Nos  aa</h2> nos
          <p>
              Lorem aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
