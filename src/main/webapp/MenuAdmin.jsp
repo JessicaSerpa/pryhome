@@ -11,8 +11,10 @@
     <div class="sidebar">
         <h2>Menú Admin</h2>
         <ul>
+            <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
             <li><a href="#"><i class="fas fa-box"></i> Productos</a></li>
             <li><a href="#"><i class="fas fa-users"></i> Clientes</a></li>
+            <li><a href="#"><i class="fa-solid fa-briefcase"></i> Empleados</a></li>
             <li><a href="#"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
         </ul>
     </div>
