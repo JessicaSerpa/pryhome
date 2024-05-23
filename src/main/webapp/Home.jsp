@@ -259,7 +259,7 @@ intervalId = setInterval(function(){
   <section class="content price">
       <div class="mission-vision">
         <article class="cortain">          
-            <h2 class="title">Misión</h2>
+            <h2 class="title">Misión a</h2> adasdasd a
             <p>Nuestra misión es proporcionar productos de alta calidad que mejoren la vida de nuestros clientes.</p>
                     <a href="#" class="btn">Saber precio</a>
         </article>
