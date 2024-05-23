@@ -17,7 +17,7 @@
               <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
           <link href="CSS/StyleHome.css" rel="stylesheet" type="text/css"/>
           
-        <title>Mario no me quiere</title>      
+        <title>Mario no me quiere :c</title>      
     </head>
  <body>
     <div class="cabeza">
