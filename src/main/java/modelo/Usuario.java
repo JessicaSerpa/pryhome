@@ -9,6 +9,8 @@ public class Usuario {
     private String direccion;
     private String dni;
     private String tipo_usuario;
+    private int edad;
+    private String departamento;
 
     public Usuario() {
     }
@@ -77,4 +79,23 @@ public class Usuario {
     public void setTipo_usuario(String tipo_usuario) {
         this.tipo_usuario = tipo_usuario;
     }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+    
+    
+    
 }

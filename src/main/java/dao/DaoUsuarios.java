@@ -81,6 +81,31 @@ public class DaoUsuarios {
 
     // Otros métodos CRUD y métodos de utilidad irían aquí
 
+    //Metodo para listar usuarios
+   
+    /*
+    public List<Pro> LisProducto(String id) {
+        List<Producto> lista = new ArrayList();
+        Connection cn = MySQLConexion.getConexion();
+        try {
+            String sql = "select  a.id_prod,a.nombre,a.stock\n"
+                    + "from producto a join categoria n on a.id_cat=n.id_cat where n.id_cat=?;";
+            PreparedStatement st = cn.prepareStatement(sql);
+            st.setString(1, id);
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                Producto p = new Producto();
+                p.setId_prod(rs.getInt(1));
+                p.setNombre(rs.getString(2));
+                p.setStock(rs.getInt(3));
+                lista.add(p);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return lista;
+    }*/
+
     // Método para cerrar la conexión y liberar recursos
     private void cerrarRecursos(Connection conn, PreparedStatement stmt, ResultSet rs) {
         // Implementación para cerrar la conexión y liberar recursos
