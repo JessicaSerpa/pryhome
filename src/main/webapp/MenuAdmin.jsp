@@ -11,7 +11,7 @@
     <div class="sidebar">
         <h2>Menú Admin</h2>
         <ul>
-            <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="Admin.jsp"><i class="fa-solid fa-house"></i> Home</a></li>
             <li><a href="producto.jsp"><i class="fas fa-box"></i> Productos</a></li>
             <li><a href="#"><i class="fas fa-users"></i> Clientes</a></li>
             <li><a href="#"><i class="fa-solid fa-briefcase"></i> Empleados</a></li>
@@ -19,7 +19,7 @@
         </ul>
     </div>
     <div class="content">
-        <!-- Aquí va el contenido principal de la página -->
+        <!-- Aquí va el contenido principal de la página-->
     </div>
 </body>
 </html>
