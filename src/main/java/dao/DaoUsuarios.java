@@ -26,7 +26,7 @@ public class DaoUsuarios {
 
             if (rs.next()) {
                 usuario = new Usuario();
-                usuario.setId_usuario(rs.getInt("id_usuario"));
+                usuario.setId_usu(rs.getInt("id_usuario"));
                 usuario.setNom_usuario(rs.getString("nom_usuario"));
                 usuario.setCorreo(rs.getString("correo"));
                 usuario.setPass_usuario(rs.getString("pass_usuario"));
@@ -34,6 +34,7 @@ public class DaoUsuarios {
                 usuario.setDireccion(rs.getString("direccion"));
                 usuario.setDni(rs.getString("dni"));
                 usuario.setTipo_usuario(rs.getString("tipo_usuario"));
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -59,6 +60,7 @@ public class DaoUsuarios {
             stmt.setString(4, usuario.getTelefono());
             stmt.setString(5, usuario.getDireccion());
             stmt.setString(6, usuario.getDni());
+
             
             int rowsAffected = stmt.executeUpdate();
             return rowsAffected > 0;
@@ -81,7 +83,7 @@ public class DaoUsuarios {
         }
     }
 
-    // Otros métodos CRUD y métodos de utilidad irían aquí
+    // Otros métodos CRUD para CLIENTES Y EMPLEADOS
 
     //Metodo para listar usuarios/edad
    
@@ -96,7 +98,7 @@ public class DaoUsuarios {
                 ResultSet rs = st.executeQuery();
                 while (rs.next()) {
                     Usuario p = new Usuario();
-                    p.setId_usuario(rs.getInt(1));
+                    p.setId_usu(rs.getInt(1));
                     p.setNom_usuario(rs.getString(2));
                     p.setTipo_usuario(rs.getString(3));
                     p.setEdad(rs.getInt(4));
@@ -114,4 +116,9 @@ public class DaoUsuarios {
     private void cerrarRecursos(Connection conn, PreparedStatement stmt, ResultSet rs) {
         // Implementación para cerrar la conexión y liberar recursos
     }
+    
+       // Otros métodos CRUD para CLIENTES 
+    
+      // Otros métodos CRUD para EMPLEADOS
+    
 }

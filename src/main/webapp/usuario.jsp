@@ -87,7 +87,7 @@
                                     <tr><th>Codigo<th>Nombre<th>Edad
                                             <%
                                                 for (Usuario x : obj.LisAllUsuario()){
-                                                    out.print("<tr><td>" + x.getId_usuario()+ "<td>" + x.getNom_usuario()+ "<td>" + x.getEdad());
+                                                    out.print("<tr><td>" + x.getId_usu()+ "<td>" + x.getNom_usuario()+ "<td>" + x.getEdad());
                                                 }
 
                                             %> 

@@ -1,7 +1,7 @@
 package modelo;
 
 public class Usuario {
-    private int id_usuario;
+    private int id_usu;
     private String nom_usuario;
     private String correo;
     private String pass_usuario;
@@ -15,13 +15,12 @@ public class Usuario {
     public Usuario() {
     }
 
-
-    public int getId_usuario() {
-        return id_usuario;
+    public int getId_usu() {
+        return id_usu;
     }
 
-    public void setId_usuario(int id_usuario) {
-        this.id_usuario = id_usuario;
+    public void setId_usu(int id_usu) {
+        this.id_usu = id_usu;
     }
 
     public String getNom_usuario() {
@@ -32,10 +31,10 @@ public class Usuario {
         this.nom_usuario = nom_usuario;
     }
 
-        public String getCorreo() {
-            return correo;
-        }
-    
+    public String getCorreo() {
+        return correo;
+    }
+
     public void setCorreo(String correo) {
         this.correo = correo;
     }
@@ -95,7 +94,8 @@ public class Usuario {
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
-    
+
+
     
     
 }

@@ -9,7 +9,7 @@
 <%@page import="dao.DaoProducto"%>
 <%@page import="dao.DaoCategoria"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="MenuAdmin.jsp"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -39,6 +39,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%@include file="MenuAdmin.jsp"%>
              <!-- Aquí va el contenido principal de la página-->
        
         
