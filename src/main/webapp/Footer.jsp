@@ -33,7 +33,7 @@
                 <a href="#">Blog</a>
             </p>
 
-            <p class="footer-company-name">Copyright © 2021 <strong>SagarDeveloper</strong> All rights reserved</p>
+            <p class="footer-company-name">Copyright © 2024 <strong>SagarDeveloper</strong> All rights reserved</p>
         </div>
 
         <div class="footer-center">
