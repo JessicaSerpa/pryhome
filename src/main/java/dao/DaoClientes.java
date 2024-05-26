@@ -32,13 +32,16 @@ public class DaoClientes {
         
       }
      }catch(Exception ex){
-        ex.printStackTrace();
+        System.out.println("Se ha producido un error al ejecutar la operación:");
+    ex.printStackTrace();
+    System.out.println("Mensaje de error: " + ex.getMessage());
      }
      return lista;
  }   
  //buscar por codigo
  public Usuario busCli(String cod){
-    Usuario p=null;
+    Usuario p=null; 
+    
      Connection cn=MySQLConexion.getConexion();
      try{
       String sql="select   id_usuario,nom_usuario,correo, pass_usuario, telefono, direccion, dni, edad, departamento where id_usuario=?";
@@ -57,9 +60,12 @@ public class DaoClientes {
           p.setTipo_usuario(rs.getString(8));
           p.setEdad(rs.getInt(9));
           p.setDepartamento(rs.getString(10));
+          
       }
      }catch(Exception ex){
-        ex.printStackTrace();
+         System.out.println("Se ha producido un error al ejecutar la operación:");
+    ex.printStackTrace();
+    System.out.println("Mensaje de error: " + ex.getMessage());
      }
      return p;
  }
@@ -74,13 +80,15 @@ public class DaoClientes {
   st.setString(2, a.getCorreo());
   st.setString(3, a.getPass_usuario());
   st.setString(4, a.getTelefono());
-  st.setString(4, a.getDireccion());
-  st.setString(4, a.getDni());
-  st.setInt(4, a.getEdad());
-  st.setString(4, a.getDepartamento());
+  st.setString(5, a.getDireccion());
+  st.setString(6, a.getDni());
+  st.setInt(7, a.getEdad());
+  st.setString(8, a.getDepartamento());
   st.executeUpdate();
  }catch(Exception ex){
-     ex.printStackTrace();
+   System.out.println("Se ha producido un error al ejecutar la operación:");
+    ex.printStackTrace();
+    System.out.println("Mensaje de error: " + ex.getMessage());
  }
  
 }
@@ -101,7 +109,9 @@ public void cambia(Usuario a){
   st.setString(9, a.getDepartamento());
   st.executeUpdate();
  }catch(Exception ex){
-     ex.printStackTrace();
+    System.out.println("Se ha producido un error al ejecutar la operación:");
+    ex.printStackTrace();
+    System.out.println("Mensaje de error: " + ex.getMessage());
  }
  System.out.println("aqui esta");
 } 
@@ -114,7 +124,9 @@ public void borra(String cod){
   st.setString(1, cod);
   st.executeUpdate();
  }catch(Exception ex){
-     ex.printStackTrace();
+ System.out.println("Se ha producido un error al ejecutar la operación:");
+    ex.printStackTrace();
+    System.out.println("Mensaje de error: " + ex.getMessage());
  }
 
 }  
