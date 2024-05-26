@@ -34,13 +34,9 @@
   <body>
     
 <%
-   DaoCategoria obj = new DaoCategoria();
+  
        DaoProducto obj2 = new DaoProducto();
 
-       String codc = "";
-       if (request.getParameter("cbc") != null) {
-           codc = request.getParameter("cbc");
-       }
 
  %>   
          <!<!-- tabla que lista todos los productos -->

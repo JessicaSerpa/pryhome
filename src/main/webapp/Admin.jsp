@@ -41,7 +41,7 @@
     <body>
              <!-- Aquí va el contenido principal de la página-->
        
-        <div></div>
+        
         <div class="col-sm-12">
             <!-- Grafico productos segun categoria-->
 
@@ -54,35 +54,35 @@
                     codc = request.getParameter("cbc");
                 }
 
-                String label = "'Kingston','Crucial','Adata','Asus','Generico','Gigabit'";
+                String label = "'Kingston','Crucial','Adata','Asus','Generico','Gigabit','AMD'";
                 String data = "";
                 int c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5=0, c6=0, c7=0;
-                int stock=0,stock1=0,stock2=0,stock3=0,stock4=0,stock5=0,stock6=0;
+                int stock=0,stock1=0,stock2=0,stock3=0,stock4=0,stock5=0,stock6=0, stock7=0;
                     for (Producto x : obj2.LisProducto(codc)) {
                         if (x.getMarca().equalsIgnoreCase("kingston")) {
                             stock= x.getStock();
                             c1++;
                         } else if (x.getMarca().equalsIgnoreCase("Crucial")) {
-                            stock1= x.getStock();
+                            stock1 += x.getStock();
                             c2++;
                         } else if (x.getMarca().equalsIgnoreCase("Adata")) {
-                            stock2= x.getStock();
+                            stock2 += x.getStock();
                             c3++;
                         } else if (x.getMarca().equalsIgnoreCase("Asus")) {
-                            stock3= x.getStock();
+                            stock3 += x.getStock();
                             c4++;
                         } else if (x.getMarca().equalsIgnoreCase("Generico")) {
-                            stock4= x.getStock();
+                            stock4 += x.getStock();
                             c5++;
                         } else if (x.getMarca().equalsIgnoreCase("Gigabit")) {
-                            stock5= x.getStock();
+                            stock5+= x.getStock();
                             c6++;
-                        } else {
-                            stock6= x.getStock();
+                        } else if(x.getMarca().equalsIgnoreCase("amd")){
+                            stock6+= x.getStock();
                             c7++;
                         }   
                     }
-                data = data +stock + "," + stock1 + "," + stock2 + "," + stock3+ "," + stock4+ "," + stock5+ "," + stock6;
+                data = stock + "," + stock1 + "," + stock2 + "," + stock3+ "," + stock4+ "," + stock5+ "," + stock6;
 
             %>   
             <div class="container-fluid">
