@@ -41,13 +41,13 @@ public class DaoClientes {
     Usuario p=null;
      Connection cn=MySQLConexion.getConexion();
      try{
-      String sql="select   id_usuario,nom_usuario,correo, pass_usuario, telefono, direccion, dni, edad, departamento where id_usuario=?";
+      String sql="select * from usuario where id_usuario=?";
       PreparedStatement st=cn.prepareStatement(sql);
       st.setString(1, cod);
       ResultSet rs=st.executeQuery();
       if(rs.next()){
           p=new Usuario();
-         p.setId_usu(rs.getInt(1));
+        p.setId_usu(rs.getInt(1));
           p.setNom_usuario(rs.getString(2));
           p.setCorreo(rs.getString(3));
           p.setPass_usuario(rs.getString(4));
@@ -74,10 +74,10 @@ public class DaoClientes {
   st.setString(2, a.getCorreo());
   st.setString(3, a.getPass_usuario());
   st.setString(4, a.getTelefono());
-  st.setString(4, a.getDireccion());
-  st.setString(4, a.getDni());
-  st.setInt(4, a.getEdad());
-  st.setString(4, a.getDepartamento());
+  st.setString(5, a.getDireccion());
+  st.setString(6, a.getDni());
+  st.setInt(7, a.getEdad());
+  st.setString(8, a.getDepartamento());
   st.executeUpdate();
  }catch(Exception ex){
      ex.printStackTrace();

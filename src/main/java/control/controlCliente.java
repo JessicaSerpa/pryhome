@@ -21,7 +21,7 @@ public class controlCliente extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     int op=Integer.parseInt(request.getParameter("opc"));
-
+        System.out.println(op);
      if(op==1)allCli(request, response);
      if(op==2)editar(request, response);
      if(op==3)adiCli(request, response);
@@ -31,10 +31,11 @@ public class controlCliente extends HttpServlet {
     protected void delCli(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String cod=request.getParameter("id");
+        System.out.println("A borrar el codigo "+cod);
         obj.borra(cod);
         request.setAttribute("dato", obj.getAllClientes());
         request.setAttribute("titulo", "Registro de Cliente");
-        request.setAttribute("nro", 7);
+        request.setAttribute("nro", 3);
         request.setAttribute("cli", new Usuario());
         String pag="pagClientes.jsp";
         request.getRequestDispatcher(pag).forward(request, response);
@@ -48,9 +49,11 @@ public class controlCliente extends HttpServlet {
         String cod=request.getParameter("id");
          
         request.setAttribute("dato", obj.getAllClientes());
+         System.out.println(obj.getAllClientes());
         request.setAttribute("titulo", "Actualizar Dato Cliente");
         request.setAttribute("nro", 3);
         request.setAttribute("cli", obj.busCli(cod));
+         System.out.println(obj.busCli(cod));
         String pag="pagClientes.jsp";
         request.getRequestDispatcher(pag).forward(request, response);
     }
@@ -63,7 +66,7 @@ protected void allCli(HttpServletRequest request, HttpServletResponse response)
 
         request.setAttribute("dato", obj.getAllClientes());
         request.setAttribute("titulo", "Registro de Cliente");
-        request.setAttribute("nro", 1);
+        request.setAttribute("nro", 3);
         request.setAttribute("cli", cli);
         String pag="pagClientes.jsp";
         request.getRequestDispatcher(pag).forward(request, response);
@@ -92,17 +95,19 @@ protected void allCli(HttpServletRequest request, HttpServletResponse response)
     protected void adiCli(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int sw=0;//0=adicionar 1=actualizar
- if (request.getParameter("id_usu") != null && !request.getParameter("id_usu").isEmpty()) {
+ if (Integer.parseInt(request.getParameter("id_usu")) > 0) {
         cli.setId_usu(Integer.parseInt(request.getParameter("id_usu")));
         sw = 1;
     }
- cli.setNom_usuario(request.getParameter("nom_usuario"));
+        System.out.println("Valor de sw "+sw);
+        System.out.println("El id_usu es "+request.getParameter("id_usu"));
+    cli.setNom_usuario(request.getParameter("nom_usuario"));
     cli.setCorreo(request.getParameter("correo"));
     cli.setPass_usuario(request.getParameter("pass_usuario"));
     cli.setTelefono(request.getParameter("telefono"));
     cli.setDireccion(request.getParameter("direccion"));
     cli.setDni(request.getParameter("dni"));
-    cli.setTipo_usuario(request.getParameter("tipo_usuario"));
+    cli.setTipo_usuario("Usuario");
     cli.setEdad(Integer.parseInt(request.getParameter("edad")));
     cli.setDepartamento(request.getParameter("departamento"));
         if(sw==0)
@@ -112,7 +117,7 @@ protected void allCli(HttpServletRequest request, HttpServletResponse response)
         
         request.setAttribute("dato", obj.getAllClientes());
         request.setAttribute("titulo", "Registro de Cliente");
-        request.setAttribute("nro", 7);
+        request.setAttribute("nro", 3);
         request.setAttribute("cli", new Usuario());
         String pag="pagClientes.jsp";
         request.getRequestDispatcher(pag).forward(request, response);

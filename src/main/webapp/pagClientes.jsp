@@ -29,9 +29,9 @@
                             <h3>${titulo}</h3>
                         </div>    
                         <div class="card-body">
-                            <form action="control?opc=${nro}" method="post">
+                            <form action="controlCliente?opc=${nro}" method="post">
                                 <div class="form-group">
-                                    <input type="hidden" name="coda" value="${cli.getId_usu()}">      
+                                    <input type="hidden" name="id_usu" value="${cli.getId_usu()}">      
                                 </div>      
                                 <div class="form-group">
                                     <label>Ingrese Nombre</label>
@@ -47,23 +47,23 @@
                                     </div>      
                                     <div class="form-group">
                                         <label>Ingrese Telefono</label>
-                                        <input class="form-control" name="nom_usuario" value="${cli.getTelefono()}">      
+                                        <input class="form-control" name="telefono" value="${cli.getTelefono()}">      
                                     </div>      
                                     <div class="form-group">
                                         <label>Ingrese Direccion</label>
-                                        <input class="form-control" name="nom_usuario" value="${cli.getDireccion()}">      
+                                        <input class="form-control" name="direccion" value="${cli.getDireccion()}">      
                                     </div>      
                                     <div class="form-group">
                                         <label>Ingrese DNI</label>
-                                        <input class="form-control" name="nom_usuario" value="${cli.getDni()}">      
+                                        <input class="form-control" name="dni" value="${cli.getDni()}">      
                                     </div>      
                                     <div class="form-group">
                                         <label>Ingrese edad</label>
-                                        <input class="form-control" name="nom_usuario" value="${cli.getEdad()}">      
+                                        <input class="form-control" name="edad" value="${cli.getEdad()}">      
                                     </div>      
                                     <div class="form-group">
                                         <label>Ingrese departamento</label>
-                                        <input class="form-control" name="nom_usuario" value="${cli.getDepartamento()}">      
+                                        <input class="form-control" name="departamento" value="${cli.getDepartamento()}">      
                                     </div>      
 
 
@@ -99,7 +99,7 @@
                         <td><a href="controlCliente?opc=2&id=<%=x.getId_usu()%>" class="btn btn-success">
                                 <i class="far fa-edit"></i>
                                 </a>
-                                <a href="#" onclick="valida('<%=x.getId_usu()%>')" class="btn btn-success">
+                                <a href="controlCliente?opc=4&id=<%=x.getId_usu()%>" class="btn btn-success">
                                 <i class="far fa-trash-alt"></i>    
                                 </a>
 
@@ -168,6 +168,7 @@
                         loadingRecords: "Cargando...",
                         zeroRecords: "No se encontraron datos con tu busqueda",
                         emptyTable: "No hay datos disponibles en la tabla.",
+                        
                         paginate: {
                             first: "Primero",
                             previous: "Anterior",
