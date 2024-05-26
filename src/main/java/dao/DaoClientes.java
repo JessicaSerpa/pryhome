@@ -32,13 +32,16 @@ public class DaoClientes {
         
       }
      }catch(Exception ex){
-        ex.printStackTrace();
+        System.out.println("Se ha producido un error al ejecutar la operación:");
+    ex.printStackTrace();
+    System.out.println("Mensaje de error: " + ex.getMessage());
      }
      return lista;
  }   
  //buscar por codigo
  public Usuario busCli(String cod){
-    Usuario p=null;
+    Usuario p=null; 
+    
      Connection cn=MySQLConexion.getConexion();
      try{
       String sql="select * from usuario where id_usuario=?";
@@ -57,9 +60,12 @@ public class DaoClientes {
           p.setTipo_usuario(rs.getString(8));
           p.setEdad(rs.getInt(9));
           p.setDepartamento(rs.getString(10));
+          
       }
      }catch(Exception ex){
-        ex.printStackTrace();
+         System.out.println("Se ha producido un error al ejecutar la operación:");
+    ex.printStackTrace();
+    System.out.println("Mensaje de error: " + ex.getMessage());
      }
      return p;
  }
@@ -80,7 +86,9 @@ public class DaoClientes {
   st.setString(8, a.getDepartamento());
   st.executeUpdate();
  }catch(Exception ex){
-     ex.printStackTrace();
+   System.out.println("Se ha producido un error al ejecutar la operación:");
+    ex.printStackTrace();
+    System.out.println("Mensaje de error: " + ex.getMessage());
  }
  
 }
@@ -101,7 +109,9 @@ public void cambia(Usuario a){
   st.setString(9, a.getDepartamento());
   st.executeUpdate();
  }catch(Exception ex){
-     ex.printStackTrace();
+    System.out.println("Se ha producido un error al ejecutar la operación:");
+    ex.printStackTrace();
+    System.out.println("Mensaje de error: " + ex.getMessage());
  }
  System.out.println("aqui esta");
 } 
@@ -114,7 +124,9 @@ public void borra(String cod){
   st.setString(1, cod);
   st.executeUpdate();
  }catch(Exception ex){
-     ex.printStackTrace();
+ System.out.println("Se ha producido un error al ejecutar la operación:");
+    ex.printStackTrace();
+    System.out.println("Mensaje de error: " + ex.getMessage());
  }
 
 }  
