@@ -4,6 +4,8 @@
     Author     : USUARIO
 --%>
 
+<%@page import="modelo.Usuario"%>
+<%@page import="dao.DaoUsuarios"%>
 <%@page import="modelo.Categoria"%>
 <%@page import="modelo.Producto"%>
 <%@page import="dao.DaoProducto"%>
@@ -39,6 +41,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
         <%@include file="MenuAdmin.jsp"%>
              <!-- Aquí va el contenido principal de la página-->
        
@@ -93,7 +96,7 @@
                             <div class="card-body">
                                 <form>
                                     <div class="form-group">
-                                        <label>Seleccione categoria de producto</label>
+                                        <label><h4>Seleccione categoria de producto</label>
                                         <select name="cbc" class="form-control" onchange="submit()">
                                             <option>Elegir</option>
                                             
@@ -129,10 +132,11 @@
                     </div> 
 
                 </div>  
+                                
                 <div class="row">
                     <div class="col-sm-5">
                         <div class="container">
-                            <h2>GRAFICO DE PRODUCTOS </h2>
+                            <h4>GRAFICO DE PRODUCTOS </h4>
                             <div>
                                 <canvas id="myChart"></canvas>
                             </div>
@@ -141,12 +145,90 @@
 
                     </div>
                 </div> 
+                                
+                                <!<!-- lista de usuarios  -->
+         <div>
+                
+            <%
+                DaoUsuarios obj3 = new DaoUsuarios();
+  
+                String codc1 = "";
+                if (request.getParameter("cbc") != null) {
+                    codc = request.getParameter("cbc");
+                }
+
+                String label1 = "'18-25','26-35','36-50','51-65','>65'";
+                String data1 = "";
+                int u1 = 0, u2 = 0, u3 = 0, u4 = 0, u5=0;
+                //int stock=0,stock1=0,stock2=0,stock3=0,stock4=0,stock5=0,stock6=0;
+                    for (Usuario x : obj3.LisAllUsuario()) {
+                        if (x.getEdad()<=25) {
+                         
+                            u1++;
+                        } else if (x.getEdad()<=35)  {
+                      
+                            u2++;
+                        }else if (x.getEdad()<=50)  {
+                      
+                            u3++;
+                        }else if (x.getEdad()<=65)  {
+                      
+                            u4++;
+                        }else {
+                          
+                            u5++;
+                        }   
+                    }
+                data1 = data1 +u1+ "," + u2+ "," + u3 + "," + u4+ "," + u5;
+
+            %>   
+           
+                <div class="row">
+                    <div class="col-sm-5"> 
+                        <div class="card">
+                            <div class="card-body">
+                                <form>
+                            
+                                </form>    
+                                <table class="table table-bordered">
+                                    <thead><h2>Lista de usuarios</thead>
+                                    <tr><th>Codigo<th>Nombre<th>Edad
+                                            <%
+                                                for (Usuario x : obj3.LisAllUsuario()){
+                                                    out.print("<tr><td>" + x.getId_usu()+ "<td>" + x.getNom_usuario()+ "<td>" + x.getEdad());
+                                                }
+
+                                            %> 
+                                </table>
+                            </div>          
+                        </div>  
+
+                    </div> 
+
+                </div>  
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="container">
+                            <h4>GRAFICO DE EDADES DE USUARIOS</h4>
+                            <div>
+                                <canvas id="myChart1"></canvas>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div> 
+            </div>
+        </div>
             </div>
         </div>
         
+                                 
+        <div >
+   
         
     </body>
-
+ <!<!-- grafico para productos por categoria -->
     <script>
   var ctx = document.getElementById("myChart").getContext("2d");
   var myChart = new Chart(ctx, {
@@ -157,6 +239,39 @@
         {
           label: "Stock de productos",
           data: [<%=data%>],
+          backgroundColor: ["purple", "lightblue", "yellow", "orange", "blue", "green"],
+        },
+      ],
+    },
+    options: {
+      plugins: {
+        datalabels: {
+          anchor: 'end',
+          align: 'top',
+          formatter: (value, context) => {
+            return value;
+          },
+          color: 'purple',
+          font: {
+            weight: 'bold'
+          }
+        }
+      }
+    },
+    plugins: [ChartDataLabels]
+  });
+    </script>
+    <!<!-- grafico para usuarios  -->
+     <script>
+  var ctx = document.getElementById("myChart1").getContext("2d");
+  var myChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: [<%=label1%>],
+      datasets: [
+        {
+          label: "Total de usuarios",
+          data: [<%=data1%>],
           backgroundColor: ["purple", "lightblue", "yellow", "orange", "blue", "green"],
         },
       ],

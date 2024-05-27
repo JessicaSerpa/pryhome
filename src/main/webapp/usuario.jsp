@@ -36,8 +36,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-             <!-- Aquí va el contenido principal de la página-->
-       
+                   
         
         <div class="col-sm-12">
             <!-- Grafico productos segun categoria-->
@@ -84,6 +83,7 @@
                             
                                 </form>    
                                 <table class="table table-bordered">
+                                    <thead><h2>Lista de usuarios</thead>
                                     <tr><th>Codigo<th>Nombre<th>Edad
                                             <%
                                                 for (Usuario x : obj.LisAllUsuario()){

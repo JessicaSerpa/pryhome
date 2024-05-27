@@ -35,14 +35,14 @@
                                 <th>Nombre</th>
                                 <th>Marca</th>
                                 <th>Stock</th>
-                                <th>Precip</th
+                                <th>Precio</th
                                 
                             </tr>
                             </thead>
 
                         
                                 <%   for (Producto x : obj2.LisAllProducto()) {
-                                        out.print("<tr><td>" + x.getId_prod() + "<td>" + x.getNombre() + "<td>" + x.getMarca() + "<td>" + x.getStock() + "<td>" + x.getPrecio());
+                                        out.print("<tr><td>" + x.getId_prod() + "<td>" + x.getNombre() + "<td>" + x.getMarca() + "<td>" + x.getStock()+" Uds" + "<td>" + "S/."+x.getPrecio());
                                     }
 
                                 %> 
