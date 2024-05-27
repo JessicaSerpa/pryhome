@@ -14,9 +14,7 @@
     
     
     <body>
-             <%@include file="MenuAdmin.jsp"%>
-  
-            
+     <%@include file="MenuAdmin.jsp"%>
      <%
       DaoClientes obj=new DaoClientes();  
      %>    
