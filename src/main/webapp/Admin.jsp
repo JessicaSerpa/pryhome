@@ -21,12 +21,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
         <link href="CSS/adminlte.min.css" rel="stylesheet" type="text/css"/>
         <style>
-
+    .container {
+      width: 70%;
+      margin: 15px auto;
+    }
           body {
             text-align: center;
             color: #5b0cdd;
@@ -157,7 +161,7 @@
         <script>
             var ctx = document.getElementById("myChart").getContext("2d");
             var myChart = new Chart(ctx, {
-                type: "bar",
+                type: "line",
                 data: {
                     labels: [<%=label%>],
                     datasets: [
@@ -231,11 +235,11 @@
 
                 </div>  
                 <div class="row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-6">
                         <div class="container">
-                            <br>
-                            <hr>
+                            <center>
                             <h2>GRAFICO DE CLIENTES POR DEPARTAMENTOS</h2>
+                            </center>
                             <div>
                                 <canvas id="myChart2"></canvas>
                             </div>
@@ -248,7 +252,7 @@
                     <script>
   var ctx = document.getElementById("myChart2").getContext("2d");
   var myChart2 = new Chart(ctx, {
-    type: "bar",
+    type: "pie",
     data: {
       labels:[<%= labels.toString() %>],
       datasets: [
