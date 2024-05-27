@@ -192,7 +192,62 @@
         </script>
     </div>
                                     <div class="col-sm-10">
-            <!-- Grafico productos segun categoria-->
+                                            <div class="col-sm-10">
+        <h1>Consulta de Clientes por Departamento</h1>
+        
+        <form>
+            <div class="form-group">
+                <label>Seleccione Departamento</label>
+                <select name="departamento" class="form-control" onchange="submit()">
+                    <option value="">--elegir--</option>
+                    <%
+                        DaoUsuarios daoUsuarios = new DaoUsuarios();
+                        String selectedDepartamento = request.getParameter("departamento");
+                        
+                        for (String dept : daoUsuarios.getDepartamentosCli()) {
+                            if (selectedDepartamento != null && selectedDepartamento.equals(dept)) {
+                                out.print("<option value=\"" + dept + "\" selected>" + dept + "</option>");
+                            } else {
+                                out.print("<option value=\"" + dept + "\">" + dept + "</option>");
+                            }
+                        }
+                    %>
+                </select>
+            </div>
+        </form>
+
+        <%
+            if (selectedDepartamento != null && !selectedDepartamento.isEmpty()) {
+        %>
+            <table class="table table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>ID Usuario</th>
+                        <th>Nombre</th>
+                        <th>Departamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        for (Usuario usu : daoUsuarios.getClientePorDepartamento(selectedDepartamento)) {
+                            out.print("<tr>");
+                            out.print("<td>" + usu.getId_usu() + "</td>");
+                            out.print("<td>" + usu.getNom_usuario() + "</td>");
+                            out.print("<td>" + usu.getDepartamento() + "</td>");
+                            out.print("</tr>");
+                        }
+                    %>
+                </tbody>
+            </table>
+        <%
+            } else {
+        %>
+            <p>No se encontraron usuarios en el departamento seleccionado.</p>
+        <%
+            }
+        %>
+    </div>
+        
 <%
             DaoClientes daoClientes = new DaoClientes();
             List<Usuario> clientes = daoClientes.getAllClientes();
@@ -235,7 +290,7 @@
 
                 </div>  
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-10">
                         <div class="container">
                             <center>
                             <h2>GRAFICO DE CLIENTES POR DEPARTAMENTOS</h2>
@@ -284,6 +339,61 @@
         </div>
                      <!-- Grafico empleados  por departamento-->
         <div class="col-sm-10">
+             <div class="col-sm-10">
+        <h1>Consulta de Empleados por Departamento</h1>
+        
+        <form>
+            <div class="form-group">
+                <label>Seleccione Departament</label>
+                <select name="departament" class="form-control" onchange="submit()">
+                    <option value="">--elegir--</option>
+                    <%
+                        DaoUsuarios daE = new DaoUsuarios();
+                        String selecteddepE = request.getParameter("departament");
+                        
+                        for (String deptE : daE.getDepartamentosEmp()) {
+                            if (selecteddepE != null && selecteddepE.equals(deptE)) {
+                                out.print("<option value=\"" + deptE + "\" selected>" + deptE + "</option>");
+                            } else {
+                                out.print("<option value=\"" + deptE + "\">" + deptE + "</option>");
+                            }
+                        }
+                    %>
+                </select>
+            </div>
+        </form>
+
+        <%
+            if (selecteddepE != null && !selecteddepE.isEmpty()) {
+        %>
+            <table class="table table-bordered mt-3">
+                <thead>
+                    <tr>
+                        <th>ID Usuario</th>
+                        <th>Nombre</th>
+                        <th>Departamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        for (Usuario usuE : daE.getEmpleadoPorDepartamento(selecteddepE)) {
+                            out.print("<tr>");
+                            out.print("<td>" + usuE.getId_usu() + "</td>");
+                            out.print("<td>" + usuE.getNom_usuario() + "</td>");
+                            out.print("<td>" + usuE.getDepartamento() + "</td>");
+                            out.print("</tr>");
+                        }
+                    %>
+                </tbody>
+            </table>
+        <%
+            } else {
+        %>
+            <p>No se encontraron usuarios en el departamento seleccionado.</p>
+        <%
+            }
+        %>
+    </div>
             
 <%
             DaoEmpleados daoEmpleados= new DaoEmpleados();

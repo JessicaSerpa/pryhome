@@ -117,7 +117,78 @@ public class DaoUsuarios {
         // Implementación para cerrar la conexión y liberar recursos
     }
     
-       // GRAFICO
+       // cascada 
+      public List<Usuario> getClientePorDepartamento(String departamento) {
+        List<Usuario> lista = new ArrayList<>();
+        Connection cn = MySQLConexion.getConexion();
+        try {
+            String sql = "SELECT id_usuario, nom_usuario, departamento FROM usuario WHERE LOWER(departamento) = LOWER(?) AND tipo_usuario = 'Cliente'";
+            PreparedStatement st = cn.prepareStatement(sql);
+            st.setString(1, departamento);
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                Usuario u = new Usuario();
+                u.setId_usu(rs.getInt(1));
+                u.setNom_usuario(rs.getString(2));
+                u.setDepartamento(rs.getString(3));
+                lista.add(u);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return lista;
+    }
+            public List<Usuario> getEmpleadoPorDepartamento(String departamento) {
+        List<Usuario> lista = new ArrayList<>();
+        Connection cn = MySQLConexion.getConexion();
+        try {
+            String sql = "SELECT id_usuario, nom_usuario, departamento FROM usuario WHERE LOWER(departamento) = LOWER(?) AND tipo_usuario = 'Administrador'";
+            PreparedStatement st = cn.prepareStatement(sql);
+            st.setString(1, departamento);
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                Usuario u = new Usuario();
+                u.setId_usu(rs.getInt(1));
+                u.setNom_usuario(rs.getString(2));
+                u.setDepartamento(rs.getString(3));
+                lista.add(u);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return lista;
+    }
+
+    public List<String> getDepartamentosEmp() {
+        List<String> lista = new ArrayList<>();
+        Connection cn = MySQLConexion.getConexion();
+        try {
+            String sql = "SELECT DISTINCT LOWER(TRIM(departamento)) FROM usuario";
+            PreparedStatement st = cn.prepareStatement(sql);
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                lista.add(rs.getString(1));
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return lista;
+    }
+        public List<String> getDepartamentosCli() {
+        List<String> lista = new ArrayList<>();
+        Connection cn = MySQLConexion.getConexion();
+        try {
+            String sql = "SELECT DISTINCT LOWER(TRIM(departamento)) FROM usuario";
+            PreparedStatement st = cn.prepareStatement(sql);
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                lista.add(rs.getString(1));
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return lista;
+    }
 
 
 }
