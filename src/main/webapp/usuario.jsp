@@ -42,28 +42,28 @@
             <!-- Grafico productos segun categoria-->
 
             <%
-                DaoUsuarios obj = new DaoUsuarios();
+                DaoUsuarios objEd = new DaoUsuarios();
   
-                String codc = "";
+                String cod = "";
                 if (request.getParameter("cbc") != null) {
-                    codc = request.getParameter("cbc");
+                    cod = request.getParameter("cbc");
                 }
 
-                String label = "'18-25','26-35','36-50','51-65','>65'";
-                String data = "";
+                String la = "'18-25','26-35','36-50','51-65','>65'";
+                String d = "";
                 int c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5=0;
                 //int stock=0,stock1=0,stock2=0,stock3=0,stock4=0,stock5=0,stock6=0;
-                    for (Usuario x : obj.LisAllUsuario()) {
-                        if (x.getEdad()<=25) {
+                    for (Usuario g : objEd.LisAllUsuario()) {
+                        if (g.getEdad()<=25) {
                          
                             c1++;
-                        } else if (x.getEdad()<=35)  {
+                        } else if (g.getEdad()<=35)  {
                       
                             c2++;
-                        }else if (x.getEdad()<=50)  {
+                        }else if (g.getEdad()<=50)  {
                       
                             c3++;
-                        }else if (x.getEdad()<=65)  {
+                        }else if (g.getEdad()<=65)  {
                       
                             c4++;
                         }else {
@@ -71,7 +71,7 @@
                             c5++;
                         }   
                     }
-                data = data +c1+ "," + c2+ "," + c3 + "," + c4+ "," + c5;
+                d = d +c1+ "," + c2+ "," + c3 + "," + c4+ "," + c5;
 
             %>   
             <div class="container-fluid">
@@ -86,8 +86,8 @@
                                     <thead><h2>Lista de usuarios</thead>
                                     <tr><th>Codigo<th>Nombre<th>Edad
                                             <%
-                                                for (Usuario x : obj.LisAllUsuario()){
-                                                    out.print("<tr><td>" + x.getId_usu()+ "<td>" + x.getNom_usuario()+ "<td>" + x.getEdad());
+                                                for (Usuario g : objEd.LisAllUsuario()){
+                                                    out.print("<tr><td>" + g.getId_usu()+ "<td>" + g.getNom_usuario()+ "<td>" + g.getEdad());
                                                 }
 
                                             %> 
@@ -103,7 +103,7 @@
                         <div class="container">
                             <h2>GRAFICO DE EDADES DE USUARIOS</h2>
                             <div>
-                                <canvas id="myChart"></canvas>
+                                <canvas id="myChart4"></canvas>
                             </div>
                         </div>
 
@@ -111,21 +111,16 @@
                     </div>
                 </div> 
             </div>
-        </div>
-        
-        
-    </body>
-
-    <script>
-  var ctx = document.getElementById("myChart").getContext("2d");
-  var myChart = new Chart(ctx, {
+                                 <script>
+  var ctx = document.getElementById("myChart4").getContext("2d");
+  var myChart4 = new Chart(ctx, {
     type: "bar",
     data: {
-      labels: [<%=label%>],
+      labels: [<%=la%>],
       datasets: [
         {
           label: "Total de usuarios",
-          data: [<%=data%>],
+          data: [<%=d%>],
           backgroundColor: ["purple", "lightblue", "yellow", "orange", "blue", "green"],
         },
       ],
@@ -148,4 +143,10 @@
     plugins: [ChartDataLabels]
   });
     </script>
+        </div>
+        
+        
+    </body>
+
+   
 </html>

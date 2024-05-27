@@ -117,8 +117,7 @@ public class DaoUsuarios {
         // Implementación para cerrar la conexión y liberar recursos
     }
     
-       // Otros métodos CRUD para CLIENTES 
-    
-      // Otros métodos CRUD para EMPLEADOS
-    
+       // GRAFICO
+
+
 }

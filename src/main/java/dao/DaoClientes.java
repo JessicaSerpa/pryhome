@@ -129,7 +129,32 @@ public void borra(String cod){
     System.out.println("Mensaje de error: " + ex.getMessage());
  }
 
-}  
+}
+    //mostrar clientes por departamentos 
+    /*
+public List<Usuario> LisCliDep(String id){
+     List<Usuario> lista=new ArrayList();
+     Connection cn=MySQLConexion.getConexion();
+     try{
+      String sql="select id_usuario, nom_usuario, correo, dni, departamento tipo_usuario  from usuario where departamento=?";
+      PreparedStatement st=cn.prepareStatement(sql);
+      st.setString(1, id);
+      ResultSet rs=st.executeQuery();
+      while(rs.next()){
+        Usuario p = new Usuario();
+          p.setCoda(rs.getString(1));
+          p.setApea(rs.getString(2));
+          p.setNoma(rs.getString(3));
+          p.setExp(rs.getInt(4));
+          p.setExf(rs.getInt(5));
+          lista.add(p);
+      }
+     }catch(Exception ex){
+        ex.printStackTrace();
+     }
+     return lista;
+ }*/
+
  
     
 }

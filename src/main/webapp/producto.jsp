@@ -15,7 +15,7 @@
          <title>JSP Page</title> 
     </head>
     <body>
-
+     <%@include file="MenuAdmin.jsp"%>
         <%
 
             DaoProducto obj2 = new DaoProducto();

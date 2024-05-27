@@ -12,6 +12,7 @@ public class Usuario {
     private int edad;
     private String departamento;
 
+    
     public Usuario() {
     }
 

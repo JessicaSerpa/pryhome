@@ -1,8 +1,3 @@
-<%-- 
-    Document   : pagina_administrador
-    Created on : 14 may 2024, 19:19:27
-    Author     : USUARIO
---%>
 
 <%@page import="dao.DaoUsuarios"%>
 <%@page import="dao.DaoEmpleados"%>
