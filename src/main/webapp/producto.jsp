@@ -23,6 +23,7 @@
 
         %>   
         <!<!-- tabla que lista todos los productos -->
+         <%@include file="MenuAdmin.jsp"%>
         <div class="container-fluid">
             <div class="row">    
 

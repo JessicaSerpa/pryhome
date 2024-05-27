@@ -15,6 +15,7 @@
             <li><a href="producto.jsp"><i class="fas fa-box"></i> Productos</a></li>
             <li><a href="./controlCliente?opc=1"><i class="fas fa-users"></i> Clientes</a></li>
             <li><a href="./controlEmpleado?opc=1"><i class="fa-solid fa-briefcase"></i> Empleados</a></li>
+             <li><a href="Proveedor.jsp"><i class="fas fa-users"></i> Proveedor</a></li>
             <li><a href="#"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
         </ul>
     </div>
