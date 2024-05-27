@@ -4,9 +4,17 @@
         <servlet-name>controlCliente</servlet-name>
         <servlet-class>control.controlCliente</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>controlEmpleado</servlet-name>
+        <servlet-class>control.controlEmpleado</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>controlCliente</servlet-name>
         <url-pattern>/controlCliente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>controlEmpleado</servlet-name>
+        <url-pattern>/controlEmpleado</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
