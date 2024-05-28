@@ -138,10 +138,7 @@ intervalId = setInterval(function(){
          <!-- aca acaba el slider -->
    
           <section class="content about">
-         <h2 class="title">NUESTROS REFERENTE</h2> 
-         <p>
-           " Clientes que nos respaldan con su preferencia"
-         </p>
+         <h2 class="title">NUESTROS REFERENTES</h2> 
          <div class="box-container2">
              <div class="box">
                  <img src="img/pic1.jpg" alt=""/>
