@@ -116,7 +116,7 @@ public class DaoUsuarios {
     private void cerrarRecursos(Connection conn, PreparedStatement stmt, ResultSet rs) {
         // Implementación para cerrar la conexión y liberar recursos
     }
-    
+
        // cascada 
       public List<Usuario> getClientePorDepartamento(String departamento) {
         List<Usuario> lista = new ArrayList<>();
@@ -189,6 +189,7 @@ public class DaoUsuarios {
         }
         return lista;
     }
+
 
 
 }
