@@ -102,7 +102,7 @@
                         <div class="card-body">
                             <form>
                                 <div class="form-group">
-                                    <label>Seleccione categoria de producto</label>
+                                    <label>Consulte stock de productos</label>
                                     <select name="cbc" class="form-control" onchange="submit()">
                                         <option>Elegir</option>
 
@@ -118,7 +118,7 @@
                                     </select>
                                 </div>
                                 <div><!-- comment -->
-                                    <h1>
+
 
                                 </div>
 
@@ -147,7 +147,7 @@
                 <div class="col-sm-10">
                     <div class="container">
                         <center>
-                        <h2>GRAFICO DE PRODUCTOS </h2>
+                     <label>Grafico de stock  por productos</label>
                         <div>
                             <canvas id="myChart"></canvas>
                         </div>
@@ -193,11 +193,10 @@
     </div>
                                     <div class="col-sm-10">
                                             <div class="col-sm-10">
-        <h1>Consulta de Clientes por Departamento</h1>
         
         <form>
             <div class="form-group">
-                <label>Seleccione Departamento</label>
+                <label>Consulte clientes por departamento</label>
                 <select name="departamento" class="form-control" onchange="submit()">
                     <option value="">--elegir--</option>
                     <%
@@ -293,7 +292,7 @@
                     <div class="col-sm-10">
                         <div class="container">
                             <center>
-                            <h2>GRAFICO DE CLIENTES POR DEPARTAMENTOS</h2>
+                             <label>Grafico  general clientes por departamento</label>
                             </center>
                             <div>
                                 <canvas id="myChart2"></canvas>
@@ -340,11 +339,10 @@
                      <!-- Grafico empleados  por departamento-->
         <div class="col-sm-10">
              <div class="col-sm-10">
-        <h1>Consulta de Empleados por Departamento</h1>
         
         <form>
             <div class="form-group">
-                <label>Seleccione Departament</label>
+                <label>Consulte empleados por departamento</label>
                 <select name="departament" class="form-control" onchange="submit()">
                     <option value="">--elegir--</option>
                     <%
@@ -439,7 +437,7 @@
                 <div class="row">
                     <div class="col-sm-10">
                         <div class="container">
-                            <h2>GRAFICO DE EMPLEADOS POR DEPARTAMENTOS</h2>
+                         <label>Grafico general de empleados por departamento</label>
                             <div>
                                 <canvas id="myChart3"></canvas>
                             </div>
@@ -496,6 +494,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <form>
+                                      <label>Consulte usuario por edad </label>
                                     <select id="opcion1" name="opcion1" class="form-control">
                                         <option value="">Elegir</option>
                                         <option value="cliente">Cliente</option>
@@ -507,7 +506,7 @@
                                 </form>
                                
                                 <table class="table table-bordered">
-                                    <thead><h2>Lista de usuarios</thead>
+                                 
                                         <tr><th>Codigo<th>Nombre<th>Edad<th>Tipo usuario
                                                 <%  
                                                     String opcionSeleccionada = request.getParameter("opcion1");
@@ -604,7 +603,8 @@
                 <div class="row">
                     <div class="col-sm-10">
                         <div class="container">
-                            <h2>GRAFICO DE EDADES DE <%=tipoU%></h2>
+                              <label>Grafico de usuario por edad <%=tipoU%></label>
+                         
                             <div>
                                 <canvas id="myChart4"></canvas>
                             </div>
