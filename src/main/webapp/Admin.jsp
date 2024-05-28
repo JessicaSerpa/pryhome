@@ -100,30 +100,24 @@
                 <div class="col-sm-10">
                     <div class="card">
                         <div class="card-body">
-                            <form>
-                                <div class="form-group">
-                                    <label>Consulte stock de productos</label>
-                                    <select name="cbc" class="form-control" onchange="submit()">
-                                        <option>Elegir</option>
+                         <form>
+<form>
+    <div class="form-group">
+        <label>Consulte stock de productos</label>
+        <select name="cbc" class="form-control" onchange="submit()">
+            <option value="">Elegir</option> <!-- Mantener la opción "Elegir" -->
+            <% for (Categoria x : obj.LisCategoria()) { %>
+                <% if (codc != null && codc.equals(x.getId_cat())) { %>
+                    <option value="<%= x.getId_cat() %>" selected><%= x.getNombre() %></option>
+                <% } else { %>
+                    <option value="<%= x.getId_cat() %>"><%= x.getNombre() %></option>
+                <% } %>
+            <% } %>
+        </select>
+    </div>
+    <div><!-- comment --></div>
+</form>
 
-                                        <%
-                                            for (Categoria x : obj.LisCategoria()) {
-                                                if (codc.equals(x.getId_cat())) {
-                                                    out.print("<option value=" + x.getId_cat() + " selected>" + x.getNombre());
-                                                } else {
-                                                    out.print("<option value=" + x.getId_cat() + ">" + x.getNombre());
-                                                }
-                                            }
-                                        %>
-                                    </select>
-                                </div>
-                                <div><!-- comment -->
-
-
-                                </div>
-
-
-                            </form>
                             <table class="table table-bordered">
                                 <tr>
                                     <th>Codigo
@@ -493,17 +487,16 @@
                     <div class="col-sm-10"> 
                         <div class="card">
                             <div class="card-body">
-                                <form>
-                                      <label>Consulte usuario por edad </label>
-                                    <select id="opcion1" name="opcion1" class="form-control">
-                                        <option value="">Elegir</option>
-                                        <option value="cliente">Cliente</option>
-                                        <option value="administrador">Administrador</option>
-                                    </select>
-                                    <br>
-                                    <button type="submit" class="btn btn-primary">Filtrar</button>
 
-                                </form>
+                                    <form id="formFiltrar" method="get"> <!-- Agrega un ID al formulario -->
+                            <label>Consulte usuario por edad </label>
+                            <select id="opcion1" name="opcion1" class="form-control" onchange="document.getElementById('formFiltrar').submit();"> <!-- Agrega un evento onchange -->
+                                <option value="" <% if (request.getParameter("opcion1") == null || request.getParameter("opcion1").isEmpty()) { out.print("selected"); } %>>Elegir</option>
+                                <option value="cliente" <% if ("cliente".equals(request.getParameter("opcion1"))) { out.print("selected"); } %>>Cliente</option>
+                                <option value="administrador" <% if ("administrador".equals(request.getParameter("opcion1"))) { out.print("selected"); } %>>Administrador</option>
+                            </select>
+                            <!-- Elimina el botón de enviar -->
+                        </form>
                                
                                 <table class="table table-bordered">
                                  
