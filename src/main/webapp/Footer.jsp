@@ -21,7 +21,7 @@
          <section class="footer-distributed">
 
         <div class="footer-left">
-            <h3>Sagar<span>Developer</span></h3>
+            <h3>Utp<span>Developer</span></h3>
 
             <p class="footer-links">
                 <a href="#">Home</a>
@@ -33,32 +33,29 @@
                 <a href="#">Blog</a>
             </p>
 
-            <p class="footer-company-name">Copyright © 2024 <strong>SagarDeveloper</strong> All rights reserved</p>
+            <p class="footer-company-name">Copyright © 2024 <strong>ProyectoUTP</strong> Derechos reservados</p>
         </div>
 
         <div class="footer-center">
             <div>
                 <i class="fa fa-map-marker"></i>
-                <p><span>Ghaziabad</span>
-                    Delhi</p>
+                <p><span>Lima</span>
+                    Peru</p>
             </div>
 
             <div>
                 <i class="fa fa-phone"></i>
-                <p>+91 74**9**258</p>
+                <p>+51 999999999</p>
             </div>
             <div>
                 <i class="fa fa-envelope"></i>
-                <p><a href="mailto:sagar00001.co@gmail.com">xyz@gmail.com</a></p>
+                <p><a href="mailto:sagar00001.co@gmail.com">TechStore@gmail.com</a></p>
             </div>
         </div>
         <div class="footer-right">
             <p class="footer-company-about">
-                <span>About the company</span>
-                <strong>Sagar Developer</strong> is a Youtube channel where you can find more creative CSS Animations
-                and
-                Effects along with
-                HTML, JavaScript and Projects using C/C++.
+                <span>Nosotros</span>
+                 Nosotros somos una tienda especializada en la venta de computadoras y soluciones informáticas. Nos dedicamos a proporcionar tecnología de vanguardia, equipos de alta calidad y servicios técnicos especializados para satisfacer las necesidades de nuestros clientes.
             </p>
             <div class="footer-icons">
                 <a href="#"><i class="fa fa-facebook"></i></a>

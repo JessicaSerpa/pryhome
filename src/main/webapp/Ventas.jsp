@@ -31,10 +31,12 @@
                 id_venta = request.getParameter("cbe");
             if (request.getParameter("cba") != null)
                 id_usuario = request.getParameter("cba");
-        %>    
-
+        %>
+        <div class="container-fluid">
+        <div class="container">
         <h1>Consulta en cascada</h1>
         <form>
+            
             <div class="container-fluid">
             <div class="form-group">
                 <label>Seleccione venta</label>
@@ -67,9 +69,9 @@
                     %>    
                 </select>
             </div>
-                </div>
         </form>
-
+                    </div>
+                <div class="container-fluid">
         <table class="table table-bordered">
             <tr>
                 <th>Cod compra</th>
@@ -84,6 +86,9 @@
                     "<td>" + z.getId_tipoComp() + "<td>" + z.getFecha() + "</td></tr>");
                 }
             %>   
-        </table>     
+        </table>   
+        </div>
+        </div>
+        </div>
     </body>
 </html>

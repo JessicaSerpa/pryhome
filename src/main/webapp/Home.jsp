@@ -13,7 +13,7 @@
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
               <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
                   <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-                  
+                  <link href="CSS/adminlte.min.css" rel="stylesheet" type="text/css"/>
           <link href="CSS/StyleHome.css" rel="stylesheet" type="text/css"/>
                    <link href="CSS/StyleMenu.css" rel="stylesheet"/>
           
@@ -38,38 +38,38 @@
           <div class="container-slider">
         <div class="slider" id="slider">
             <div class="slider__section">
-                <img src="img/img1.jpg" alt="Lentes con nuevos diseños" class="slider__img">
+                <img src="img/flayer.jpg" alt="" class="slider__img"/>
               
                 <div class="slider__content">
-                    <h2 class="slider__title">Gafas</h2>
-                    <p class="slider__txt">Con nuevos diseños</p>
+                    <h2 class="slider__title">Laptops</h2>
+                    <p class="slider__txt">Las mejores laptos del mercado</p>
                     <a href="#productSection" class="btn-shop" onclick="scrollToSection('productSection')">COMPRAR
                         AHORA</a>
                 </div>
             </div>
             <div class="slider__section">
-                <img src="img/img2.jpg" alt="" class="slider__img">
+                <img src="img/flayer2.jpg" alt="" class="slider__img">
                 <div class="slider__content">
-                    <h2 class="slider__title">Lámparas</h2>
-                    <p class="slider__txt">Con efectos novedosos</p>
+                    <h2 class="slider__title">Computadoras y Componenetes </h2>
+                    <p class="slider__txt">Lo mejor para jugar</p>
                     <a href="#productSection" class="btn-shop" onclick="scrollToSection('productSection')">COMPRAR
                         AHORA</a>
                 </div>
             </div>
             <div class="slider__section">
-                <img src="img/img3.jpg" alt="" class="slider__img">
+                <img src="img/flayer 3.jpg" alt="" class="slider__img">
                 <div class="slider__content">
-                    <h2 class="slider__title">Gafas</h2>
-                    <p class="slider__txt">Con efectos maravillosos</p>
+                    <h2 class="slider__title">Perifericos</h2>
+                    <p class="slider__txt">Lomejor del mundo Gamer</p>
                     <a href="#productSection" class="btn-shop" onclick="scrollToSection('productSection')">COMPRAR
                         AHORA</a>
                 </div>
             </div>
             <div class="slider__section">
-                <img src="img/img2.jpg" alt="" class="slider__img">
+                <img src="img/flayer4.jpg" alt="" class="slider__img">
                 <div class="slider__content">
-                    <h2 class="slider__title">Lámparas</h2>
-                    <p class="slider__txt">De neón para decorar</p>
+                    <h2 class="slider__title">Los mejores precios del mercado</h2>
+                    <p class="slider__txt">Productos con las tres "B"</p>
                     <a href="#productSection" class="btn-shop" onclick="scrollToSection('productSection')">COMPRAR
                         AHORA</a>
                 </div>
@@ -136,19 +136,17 @@ intervalId = setInterval(function(){
     </div>
            
          <!-- aca acaba el slider -->
+   
           <section class="content about">
-         <h2 class="title">Si sé</h2> 
+         <h2 class="title">NUESTROS REFERENTE</h2> 
          <p>
-             Lorem aeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+           " Clientes que nos respaldan con su preferencia"
          </p>
          <div class="box-container2">
              <div class="box">
                  <img src="img/pic1.jpg" alt=""/>
-                 <h3>Lorem a ver</h3> 
-                 <p>aaaaaaaaaaaaaaaaaaaaaaa</p>
+                 <h3>Juan Perez</h3> 
+                 <p>Lo mejor para los Gamers</p>
                  <div class="stars">
                      <i class="fas fa-star"></i>
                      <i class="fas fa-star"></i>
@@ -157,10 +155,11 @@ intervalId = setInterval(function(){
                  </div>
                  
              </div>
+         
                           <div class="box">
                  <img src="img/pic2.jpg" alt=""/>
-                 <h3>Lorem</h3>
-                 <p>aaaaaaaaaaaaaaaaaaaaaaa</p>
+                 <h3>Tom Perez</h3>
+                 <p>Mejores precios </p>
                  <div class="stars">
                      <i class="fas fa-star"></i>
                      <i class="fas fa-star"></i>
@@ -171,8 +170,8 @@ intervalId = setInterval(function(){
              </div>
                           <div class="box">
                  <img src="img/pic3.jpg" alt=""/>
-                 <h3>Lorem</h3>
-                 <p>aaaaaaaaaaaaaaaaaaaaaaa</p>
+                 <h3>Camila Perez</h3>
+                 <p>Productos de calidad</p>
                  <div class="stars">
                      <i class="fas fa-star"></i>
                      <i class="fas fa-star"></i>
@@ -189,53 +188,52 @@ intervalId = setInterval(function(){
      
      
   <section class="content price">
+      <div class="container">
       <div class="mission-vision">
         <article class="cortain">          
-            <h2 class="title">Misión b</h2> 
-            <p>Nuestra misión es proporcionar productos de alta calidad que mejoren la vida de nuestros clientes.</p>
+            <h2 class="title">Misión</h2> 
+            <p>"Ofrecer tecnología de vanguardia y servicios excepcionales para satisfacer las necesidades informáticas de nuestros clientes, garantizando calidad, accesibilidad y soporte técnico personalizado."</p>
                     <a href="#" class="btn">Saber precio</a>
         </article>
 
         <article class="cortain">          
             <h2 class="title">Visión</h2>
-            <p>Nuestra visión es ser líderes en el mercado, reconocidos por nuestra innovación y compromiso con la excelencia.</p>
+            <p>"Ser la tienda líder en soluciones informáticas, reconocida por nuestra innovación, confiabilidad y compromiso con el cliente, facilitando el acceso a la tecnología para todos."</p>
                     <a href="#" class="btn">Saber precio</a>
         </article>
 
         </div>
+      </div>
     </section>
          
         <section class="content sau">
             <h2 class="title">Productos</h2>
             <p>
-                Lorem aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+               Vendemos productos como:
             </p>
             
             <div class="box-container">              
                 <div class="box">
-                    <i class="fab fa-angular"></i>
-                    <h3>Lorem</h3><!-- comment -->
+                    <i class="fa-sharp fa-solid fa-computer"></i>
+                    <h3>Computadoras</h3><!-- comment -->
                     <p>
-                           Lorem aaaaaaaaaaaaaaaaa
+                           Lo mejor del mundo Gamer
                     </p>
                 </div>
                 
                     <div class="box">
-                    <i class="fab fa-apple"></i>
-                    <h3>Lorem</h3><!-- comment -->
+               <i class="fa-solid fa-microchip"></i>
+                    <h3>CPUs y GPUs</h3><!-- comment -->
                     <p>
-                           Lorem aaaaaaaaaaaaaaaaa
+                        Disfruta tus juegos al maximo 
                     </p>
                 </div>
                 
                                 <div class="box">
-                    <i class="fab fa-android"></i>
-                    <h3>Lorem</h3><!-- comment -->
+<i class="fa-solid fa-computer-mouse"></i>
+                    <h3>Perifericos</h3><!-- comment -->
                     <p>
-                           Lorem aaaaaaaaaaaaaaaaa
+                          Los mejores perifericos para jugar
                     </p>
                 </div>             
             </div>            

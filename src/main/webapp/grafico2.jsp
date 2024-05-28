@@ -124,8 +124,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-10"> 
-                        <div class="card">
-                            <div class="card-body">
+                        <div >
+                            <div>
                                 <form>
                             
                                 </form>    
